@@ -38,6 +38,9 @@ module Toy
   end
 end
 
-class Boolean
+unless defined?(Boolean)
+  class Boolean; end
+end
+Boolean.module_eval do
   extend Toy::Extensions::Boolean
 end
